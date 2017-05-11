@@ -1,0 +1,1286 @@
+
+gradesTemp:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000400650 <_init>:
+_init():
+  400650:	48 83 ec 08          	sub    $0x8,%rsp
+  400654:	48 8b 05 1d 11 20 00 	mov    0x20111d(%rip),%rax        # 601778 <_DYNAMIC+0x1d0>
+  40065b:	48 85 c0             	test   %rax,%rax
+  40065e:	74 05                	je     400665 <_init+0x15>
+  400660:	e8 7b 00 00 00       	callq  4006e0 <__gmon_start__@plt>
+  400665:	48 83 c4 08          	add    $0x8,%rsp
+  400669:	c3                   	retq   
+
+Disassembly of section .plt:
+
+0000000000400670 <putchar@plt-0x10>:
+  400670:	ff 35 12 11 20 00    	pushq  0x201112(%rip)        # 601788 <_GLOBAL_OFFSET_TABLE_+0x8>
+  400676:	ff 25 14 11 20 00    	jmpq   *0x201114(%rip)        # 601790 <_GLOBAL_OFFSET_TABLE_+0x10>
+  40067c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000400680 <putchar@plt>:
+  400680:	ff 25 12 11 20 00    	jmpq   *0x201112(%rip)        # 601798 <_GLOBAL_OFFSET_TABLE_+0x18>
+  400686:	68 00 00 00 00       	pushq  $0x0
+  40068b:	e9 e0 ff ff ff       	jmpq   400670 <_init+0x20>
+
+0000000000400690 <puts@plt>:
+  400690:	ff 25 0a 11 20 00    	jmpq   *0x20110a(%rip)        # 6017a0 <_GLOBAL_OFFSET_TABLE_+0x20>
+  400696:	68 01 00 00 00       	pushq  $0x1
+  40069b:	e9 d0 ff ff ff       	jmpq   400670 <_init+0x20>
+
+00000000004006a0 <setbuf@plt>:
+  4006a0:	ff 25 02 11 20 00    	jmpq   *0x201102(%rip)        # 6017a8 <_GLOBAL_OFFSET_TABLE_+0x28>
+  4006a6:	68 02 00 00 00       	pushq  $0x2
+  4006ab:	e9 c0 ff ff ff       	jmpq   400670 <_init+0x20>
+
+00000000004006b0 <printf@plt>:
+  4006b0:	ff 25 fa 10 20 00    	jmpq   *0x2010fa(%rip)        # 6017b0 <_GLOBAL_OFFSET_TABLE_+0x30>
+  4006b6:	68 03 00 00 00       	pushq  $0x3
+  4006bb:	e9 b0 ff ff ff       	jmpq   400670 <_init+0x20>
+
+00000000004006c0 <__libc_start_main@plt>:
+  4006c0:	ff 25 f2 10 20 00    	jmpq   *0x2010f2(%rip)        # 6017b8 <_GLOBAL_OFFSET_TABLE_+0x38>
+  4006c6:	68 04 00 00 00       	pushq  $0x4
+  4006cb:	e9 a0 ff ff ff       	jmpq   400670 <_init+0x20>
+
+00000000004006d0 <srand@plt>:
+  4006d0:	ff 25 ea 10 20 00    	jmpq   *0x2010ea(%rip)        # 6017c0 <_GLOBAL_OFFSET_TABLE_+0x40>
+  4006d6:	68 05 00 00 00       	pushq  $0x5
+  4006db:	e9 90 ff ff ff       	jmpq   400670 <_init+0x20>
+
+00000000004006e0 <__gmon_start__@plt>:
+  4006e0:	ff 25 e2 10 20 00    	jmpq   *0x2010e2(%rip)        # 6017c8 <_GLOBAL_OFFSET_TABLE_+0x48>
+  4006e6:	68 06 00 00 00       	pushq  $0x6
+  4006eb:	e9 80 ff ff ff       	jmpq   400670 <_init+0x20>
+
+00000000004006f0 <time@plt>:
+  4006f0:	ff 25 da 10 20 00    	jmpq   *0x2010da(%rip)        # 6017d0 <_GLOBAL_OFFSET_TABLE_+0x50>
+  4006f6:	68 07 00 00 00       	pushq  $0x7
+  4006fb:	e9 70 ff ff ff       	jmpq   400670 <_init+0x20>
+
+0000000000400700 <gets@plt>:
+  400700:	ff 25 d2 10 20 00    	jmpq   *0x2010d2(%rip)        # 6017d8 <_GLOBAL_OFFSET_TABLE_+0x58>
+  400706:	68 08 00 00 00       	pushq  $0x8
+  40070b:	e9 60 ff ff ff       	jmpq   400670 <_init+0x20>
+
+0000000000400710 <mprotect@plt>:
+  400710:	ff 25 ca 10 20 00    	jmpq   *0x2010ca(%rip)        # 6017e0 <_GLOBAL_OFFSET_TABLE_+0x60>
+  400716:	68 09 00 00 00       	pushq  $0x9
+  40071b:	e9 50 ff ff ff       	jmpq   400670 <_init+0x20>
+
+0000000000400720 <sysconf@plt>:
+  400720:	ff 25 c2 10 20 00    	jmpq   *0x2010c2(%rip)        # 6017e8 <_GLOBAL_OFFSET_TABLE_+0x68>
+  400726:	68 0a 00 00 00       	pushq  $0xa
+  40072b:	e9 40 ff ff ff       	jmpq   400670 <_init+0x20>
+
+0000000000400730 <atoi@plt>:
+  400730:	ff 25 ba 10 20 00    	jmpq   *0x2010ba(%rip)        # 6017f0 <_GLOBAL_OFFSET_TABLE_+0x70>
+  400736:	68 0b 00 00 00       	pushq  $0xb
+  40073b:	e9 30 ff ff ff       	jmpq   400670 <_init+0x20>
+
+0000000000400740 <exit@plt>:
+  400740:	ff 25 b2 10 20 00    	jmpq   *0x2010b2(%rip)        # 6017f8 <_GLOBAL_OFFSET_TABLE_+0x78>
+  400746:	68 0c 00 00 00       	pushq  $0xc
+  40074b:	e9 20 ff ff ff       	jmpq   400670 <_init+0x20>
+
+0000000000400750 <rand@plt>:
+  400750:	ff 25 aa 10 20 00    	jmpq   *0x2010aa(%rip)        # 601800 <_GLOBAL_OFFSET_TABLE_+0x80>
+  400756:	68 0d 00 00 00       	pushq  $0xd
+  40075b:	e9 10 ff ff ff       	jmpq   400670 <_init+0x20>
+
+Disassembly of section .text:
+
+0000000000400760 <_start>:
+_start():
+  400760:	31 ed                	xor    %ebp,%ebp
+  400762:	49 89 d1             	mov    %rdx,%r9
+  400765:	5e                   	pop    %rsi
+  400766:	48 89 e2             	mov    %rsp,%rdx
+  400769:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+  40076d:	50                   	push   %rax
+  40076e:	54                   	push   %rsp
+  40076f:	49 c7 c0 00 12 40 00 	mov    $0x401200,%r8
+  400776:	48 c7 c1 90 11 40 00 	mov    $0x401190,%rcx
+  40077d:	48 c7 c7 56 08 40 00 	mov    $0x400856,%rdi
+  400784:	e8 37 ff ff ff       	callq  4006c0 <__libc_start_main@plt>
+  400789:	f4                   	hlt    
+  40078a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000400790 <deregister_tm_clones>:
+deregister_tm_clones():
+  400790:	b8 1f 18 60 00       	mov    $0x60181f,%eax
+  400795:	55                   	push   %rbp
+  400796:	48 2d 18 18 60 00    	sub    $0x601818,%rax
+  40079c:	48 83 f8 0e          	cmp    $0xe,%rax
+  4007a0:	48 89 e5             	mov    %rsp,%rbp
+  4007a3:	76 1b                	jbe    4007c0 <deregister_tm_clones+0x30>
+  4007a5:	b8 00 00 00 00       	mov    $0x0,%eax
+  4007aa:	48 85 c0             	test   %rax,%rax
+  4007ad:	74 11                	je     4007c0 <deregister_tm_clones+0x30>
+  4007af:	5d                   	pop    %rbp
+  4007b0:	bf 18 18 60 00       	mov    $0x601818,%edi
+  4007b5:	ff e0                	jmpq   *%rax
+  4007b7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  4007be:	00 00 
+  4007c0:	5d                   	pop    %rbp
+  4007c1:	c3                   	retq   
+  4007c2:	66 66 66 66 66 2e 0f 	data16 data16 data16 data16 nopw %cs:0x0(%rax,%rax,1)
+  4007c9:	1f 84 00 00 00 00 00 
+
+00000000004007d0 <register_tm_clones>:
+register_tm_clones():
+  4007d0:	be 18 18 60 00       	mov    $0x601818,%esi
+  4007d5:	55                   	push   %rbp
+  4007d6:	48 81 ee 18 18 60 00 	sub    $0x601818,%rsi
+  4007dd:	48 c1 fe 03          	sar    $0x3,%rsi
+  4007e1:	48 89 e5             	mov    %rsp,%rbp
+  4007e4:	48 89 f0             	mov    %rsi,%rax
+  4007e7:	48 c1 e8 3f          	shr    $0x3f,%rax
+  4007eb:	48 01 c6             	add    %rax,%rsi
+  4007ee:	48 d1 fe             	sar    %rsi
+  4007f1:	74 15                	je     400808 <register_tm_clones+0x38>
+  4007f3:	b8 00 00 00 00       	mov    $0x0,%eax
+  4007f8:	48 85 c0             	test   %rax,%rax
+  4007fb:	74 0b                	je     400808 <register_tm_clones+0x38>
+  4007fd:	5d                   	pop    %rbp
+  4007fe:	bf 18 18 60 00       	mov    $0x601818,%edi
+  400803:	ff e0                	jmpq   *%rax
+  400805:	0f 1f 00             	nopl   (%rax)
+  400808:	5d                   	pop    %rbp
+  400809:	c3                   	retq   
+  40080a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000400810 <__do_global_dtors_aux>:
+__do_global_dtors_aux():
+  400810:	80 3d 31 10 20 00 00 	cmpb   $0x0,0x201031(%rip)        # 601848 <completed.6661>
+  400817:	75 11                	jne    40082a <__do_global_dtors_aux+0x1a>
+  400819:	55                   	push   %rbp
+  40081a:	48 89 e5             	mov    %rsp,%rbp
+  40081d:	e8 6e ff ff ff       	callq  400790 <deregister_tm_clones>
+  400822:	5d                   	pop    %rbp
+  400823:	c6 05 1e 10 20 00 01 	movb   $0x1,0x20101e(%rip)        # 601848 <completed.6661>
+  40082a:	f3 c3                	repz retq 
+  40082c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000400830 <frame_dummy>:
+frame_dummy():
+  400830:	bf a0 15 60 00       	mov    $0x6015a0,%edi
+  400835:	48 83 3f 00          	cmpq   $0x0,(%rdi)
+  400839:	75 05                	jne    400840 <frame_dummy+0x10>
+  40083b:	eb 93                	jmp    4007d0 <register_tm_clones>
+  40083d:	0f 1f 00             	nopl   (%rax)
+  400840:	b8 00 00 00 00       	mov    $0x0,%eax
+  400845:	48 85 c0             	test   %rax,%rax
+  400848:	74 f1                	je     40083b <frame_dummy+0xb>
+  40084a:	55                   	push   %rbp
+  40084b:	48 89 e5             	mov    %rsp,%rbp
+  40084e:	ff d0                	callq  *%rax
+  400850:	5d                   	pop    %rbp
+  400851:	e9 7a ff ff ff       	jmpq   4007d0 <register_tm_clones>
+
+0000000000400856 <main>:
+main():
+/home/lribeir1/CS220/proj4/gradesTemp.c:24
+char retBufferArea[1024+4096];
+char *retBuffer;
+
+FILE *txtFile;
+
+int main(int argc, char ** argv) {
+  400856:	55                   	push   %rbp
+  400857:	48 89 e5             	mov    %rsp,%rbp
+  40085a:	48 83 ec 30          	sub    $0x30,%rsp
+  40085e:	89 7d dc             	mov    %edi,-0x24(%rbp)
+  400861:	48 89 75 d0          	mov    %rsi,-0x30(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:28
+	char * secID;
+	time_t t;
+
+	long pagesize = sysconf(_SC_PAGESIZE);;
+  400865:	bf 1e 00 00 00       	mov    $0x1e,%edi
+  40086a:	e8 b1 fe ff ff       	callq  400720 <sysconf@plt>
+  40086f:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:29
+	setbuf(stdout,0);
+  400873:	48 8b 05 c6 0f 20 00 	mov    0x200fc6(%rip),%rax        # 601840 <stdout@@GLIBC_2.2.5>
+  40087a:	be 00 00 00 00       	mov    $0x0,%esi
+  40087f:	48 89 c7             	mov    %rax,%rdi
+  400882:	e8 19 fe ff ff       	callq  4006a0 <setbuf@plt>
+/home/lribeir1/CS220/proj4/gradesTemp.c:30
+	retBuffer=(char *)(((long)retBufferArea + pagesize-1) & ~(pagesize-1));
+  400887:	b8 80 18 60 00       	mov    $0x601880,%eax
+  40088c:	48 8d 50 ff          	lea    -0x1(%rax),%rdx
+  400890:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  400894:	48 01 c2             	add    %rax,%rdx
+  400897:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  40089b:	48 f7 d8             	neg    %rax
+  40089e:	48 21 d0             	and    %rdx,%rax
+  4008a1:	48 89 05 08 35 20 00 	mov    %rax,0x203508(%rip)        # 603db0 <retBuffer>
+/home/lribeir1/CS220/proj4/gradesTemp.c:31
+	if(mprotect(retBuffer, 1024, PROT_READ|PROT_EXEC|PROT_WRITE)) {
+  4008a8:	48 8b 05 01 35 20 00 	mov    0x203501(%rip),%rax        # 603db0 <retBuffer>
+  4008af:	ba 07 00 00 00       	mov    $0x7,%edx
+  4008b4:	be 00 04 00 00       	mov    $0x400,%esi
+  4008b9:	48 89 c7             	mov    %rax,%rdi
+  4008bc:	e8 4f fe ff ff       	callq  400710 <mprotect@plt>
+  4008c1:	85 c0                	test   %eax,%eax
+  4008c3:	74 14                	je     4008d9 <main+0x83>
+/home/lribeir1/CS220/proj4/gradesTemp.c:32
+      printf("mprotect failed\n");
+  4008c5:	bf 18 12 40 00       	mov    $0x401218,%edi
+  4008ca:	e8 c1 fd ff ff       	callq  400690 <puts@plt>
+/home/lribeir1/CS220/proj4/gradesTemp.c:33
+      return(1);
+  4008cf:	b8 01 00 00 00       	mov    $0x1,%eax
+  4008d4:	e9 fe 00 00 00       	jmpq   4009d7 <main+0x181>
+/home/lribeir1/CS220/proj4/gradesTemp.c:35
+   }
+   if (argc==1) srand((unsigned) time(&t));
+  4008d9:	83 7d dc 01          	cmpl   $0x1,-0x24(%rbp)
+  4008dd:	75 15                	jne    4008f4 <main+0x9e>
+/home/lribeir1/CS220/proj4/gradesTemp.c:35 (discriminator 1)
+  4008df:	48 8d 45 e0          	lea    -0x20(%rbp),%rax
+  4008e3:	48 89 c7             	mov    %rax,%rdi
+  4008e6:	e8 05 fe ff ff       	callq  4006f0 <time@plt>
+  4008eb:	89 c7                	mov    %eax,%edi
+  4008ed:	e8 de fd ff ff       	callq  4006d0 <srand@plt>
+  4008f2:	eb 20                	jmp    400914 <main+0xbe>
+/home/lribeir1/CS220/proj4/gradesTemp.c:37
+   else {
+   	unsigned int seed=atoi(argv[1]);
+  4008f4:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+  4008f8:	48 83 c0 08          	add    $0x8,%rax
+  4008fc:	48 8b 00             	mov    (%rax),%rax
+  4008ff:	48 89 c7             	mov    %rax,%rdi
+  400902:	e8 29 fe ff ff       	callq  400730 <atoi@plt>
+  400907:	89 45 f4             	mov    %eax,-0xc(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:38
+   	srand(seed);
+  40090a:	8b 45 f4             	mov    -0xc(%rbp),%eax
+  40090d:	89 c7                	mov    %eax,%edi
+  40090f:	e8 bc fd ff ff       	callq  4006d0 <srand@plt>
+/home/lribeir1/CS220/proj4/gradesTemp.c:40
+	}
+	getGrades(aGrades,ASIZE);
+  400914:	be 24 00 00 00       	mov    $0x24,%esi
+  400919:	bf c0 3d 60 00       	mov    $0x603dc0,%edi
+  40091e:	e8 50 01 00 00       	callq  400a73 <getGrades>
+/home/lribeir1/CS220/proj4/gradesTemp.c:41
+	getGrades(bGrades,BSIZE);
+  400923:	be 36 00 00 00       	mov    $0x36,%esi
+  400928:	bf 80 2c 60 00       	mov    $0x602c80,%edi
+  40092d:	e8 41 01 00 00       	callq  400a73 <getGrades>
+/home/lribeir1/CS220/proj4/gradesTemp.c:42
+	getAvg(aGrades,ASIZE);
+  400932:	be 24 00 00 00       	mov    $0x24,%esi
+  400937:	bf c0 3d 60 00       	mov    $0x603dc0,%edi
+  40093c:	e8 ca 03 00 00       	callq  400d0b <getAvg>
+/home/lribeir1/CS220/proj4/gradesTemp.c:43
+	getAvg(bGrades,BSIZE);
+  400941:	be 36 00 00 00       	mov    $0x36,%esi
+  400946:	bf 80 2c 60 00       	mov    $0x602c80,%edi
+  40094b:	e8 bb 03 00 00       	callq  400d0b <getAvg>
+/home/lribeir1/CS220/proj4/gradesTemp.c:44
+	changeGrade(bGrades);
+  400950:	bf 80 2c 60 00       	mov    $0x602c80,%edi
+  400955:	e8 7f 00 00 00       	callq  4009d9 <changeGrade>
+/home/lribeir1/CS220/proj4/gradesTemp.c:46
+
+	printf("Choose section A or B: ");
+  40095a:	bf 28 12 40 00       	mov    $0x401228,%edi
+  40095f:	b8 00 00 00 00       	mov    $0x0,%eax
+  400964:	e8 47 fd ff ff       	callq  4006b0 <printf@plt>
+/home/lribeir1/CS220/proj4/gradesTemp.c:47
+	secID=getUserLine();
+  400969:	b8 00 00 00 00       	mov    $0x0,%eax
+  40096e:	e8 b3 05 00 00       	callq  400f26 <getUserLine>
+  400973:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:48
+	printf("\n");
+  400977:	bf 0a 00 00 00       	mov    $0xa,%edi
+  40097c:	e8 ff fc ff ff       	callq  400680 <putchar@plt>
+/home/lribeir1/CS220/proj4/gradesTemp.c:51
+
+
+	if (secID[0]=='A') {
+  400981:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  400985:	0f b6 00             	movzbl (%rax),%eax
+  400988:	3c 41                	cmp    $0x41,%al
+  40098a:	75 16                	jne    4009a2 <main+0x14c>
+/home/lribeir1/CS220/proj4/gradesTemp.c:52
+		printGrades(aGrades,ASIZE,100);
+  40098c:	ba 64 00 00 00       	mov    $0x64,%edx
+  400991:	be 24 00 00 00       	mov    $0x24,%esi
+  400996:	bf c0 3d 60 00       	mov    $0x603dc0,%edi
+  40099b:	e8 0f 06 00 00       	callq  400faf <printGrades>
+  4009a0:	eb 2b                	jmp    4009cd <main+0x177>
+/home/lribeir1/CS220/proj4/gradesTemp.c:53
+	} else if (secID[0]=='B') {
+  4009a2:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  4009a6:	0f b6 00             	movzbl (%rax),%eax
+  4009a9:	3c 42                	cmp    $0x42,%al
+  4009ab:	75 16                	jne    4009c3 <main+0x16d>
+/home/lribeir1/CS220/proj4/gradesTemp.c:54
+		printGrades(bGrades,BSIZE,200);
+  4009ad:	ba c8 00 00 00       	mov    $0xc8,%edx
+  4009b2:	be 36 00 00 00       	mov    $0x36,%esi
+  4009b7:	bf 80 2c 60 00       	mov    $0x602c80,%edi
+  4009bc:	e8 ee 05 00 00       	callq  400faf <printGrades>
+  4009c1:	eb 0a                	jmp    4009cd <main+0x177>
+/home/lribeir1/CS220/proj4/gradesTemp.c:56
+	} else {
+		printf("Unable to determine which section you wanted.\n");
+  4009c3:	bf 40 12 40 00       	mov    $0x401240,%edi
+  4009c8:	e8 c3 fc ff ff       	callq  400690 <puts@plt>
+/home/lribeir1/CS220/proj4/gradesTemp.c:59
+	}
+	// free(retBufferArea);
+	exit(0);
+  4009cd:	bf 00 00 00 00       	mov    $0x0,%edi
+  4009d2:	e8 69 fd ff ff       	callq  400740 <exit@plt>
+/home/lribeir1/CS220/proj4/gradesTemp.c:60
+}
+  4009d7:	c9                   	leaveq 
+  4009d8:	c3                   	retq   
+
+00000000004009d9 <changeGrade>:
+changeGrade():
+/home/lribeir1/CS220/proj4/gradesTemp.c:61
+void changeGrade(int grds[11][100]) {
+  4009d9:	55                   	push   %rbp
+  4009da:	48 89 e5             	mov    %rsp,%rbp
+  4009dd:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:62
+	int i =  0;
+  4009e1:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:63
+	int eleven = 11;
+  4009e8:	c7 45 f8 0b 00 00 00 	movl   $0xb,-0x8(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:64
+	while(i<11){
+  4009ef:	eb 7a                	jmp    400a6b <changeGrade+0x92>
+/home/lribeir1/CS220/proj4/gradesTemp.c:65
+		if(i < 4 || i > 7) grds[i][36] = 100;
+  4009f1:	83 7d fc 03          	cmpl   $0x3,-0x4(%rbp)
+  4009f5:	7e 06                	jle    4009fd <changeGrade+0x24>
+/home/lribeir1/CS220/proj4/gradesTemp.c:65 (discriminator 2)
+  4009f7:	83 7d fc 07          	cmpl   $0x7,-0x4(%rbp)
+  4009fb:	7e 35                	jle    400a32 <changeGrade+0x59>
+/home/lribeir1/CS220/proj4/gradesTemp.c:65 (discriminator 3)
+  4009fd:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400a00:	48 63 d0             	movslq %eax,%rdx
+  400a03:	48 89 d0             	mov    %rdx,%rax
+  400a06:	48 c1 e0 02          	shl    $0x2,%rax
+  400a0a:	48 01 d0             	add    %rdx,%rax
+  400a0d:	48 8d 14 85 00 00 00 	lea    0x0(,%rax,4),%rdx
+  400a14:	00 
+  400a15:	48 01 d0             	add    %rdx,%rax
+  400a18:	48 c1 e0 04          	shl    $0x4,%rax
+  400a1c:	48 89 c2             	mov    %rax,%rdx
+  400a1f:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  400a23:	48 01 d0             	add    %rdx,%rax
+  400a26:	c7 80 90 00 00 00 64 	movl   $0x64,0x90(%rax)
+  400a2d:	00 00 00 
+  400a30:	eb 35                	jmp    400a67 <changeGrade+0x8e>
+/home/lribeir1/CS220/proj4/gradesTemp.c:67
+		else{
+			grds[i][36] = (eleven - 1);
+  400a32:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400a35:	48 63 d0             	movslq %eax,%rdx
+  400a38:	48 89 d0             	mov    %rdx,%rax
+  400a3b:	48 c1 e0 02          	shl    $0x2,%rax
+  400a3f:	48 01 d0             	add    %rdx,%rax
+  400a42:	48 8d 14 85 00 00 00 	lea    0x0(,%rax,4),%rdx
+  400a49:	00 
+  400a4a:	48 01 d0             	add    %rdx,%rax
+  400a4d:	48 c1 e0 04          	shl    $0x4,%rax
+  400a51:	48 89 c2             	mov    %rax,%rdx
+  400a54:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  400a58:	48 01 d0             	add    %rdx,%rax
+  400a5b:	8b 55 f8             	mov    -0x8(%rbp),%edx
+  400a5e:	83 ea 01             	sub    $0x1,%edx
+  400a61:	89 90 90 00 00 00    	mov    %edx,0x90(%rax)
+/home/lribeir1/CS220/proj4/gradesTemp.c:69
+		}
+		i++;
+  400a67:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:64
+	exit(0);
+}
+void changeGrade(int grds[11][100]) {
+	int i =  0;
+	int eleven = 11;
+	while(i<11){
+  400a6b:	83 7d fc 0a          	cmpl   $0xa,-0x4(%rbp)
+  400a6f:	7e 80                	jle    4009f1 <changeGrade+0x18>
+/home/lribeir1/CS220/proj4/gradesTemp.c:71
+		else{
+			grds[i][36] = (eleven - 1);
+		}
+		i++;
+	}
+}
+  400a71:	5d                   	pop    %rbp
+  400a72:	c3                   	retq   
+
+0000000000400a73 <getGrades>:
+getGrades():
+/home/lribeir1/CS220/proj4/gradesTemp.c:73
+
+void getGrades(int grds[11][100],int n) {
+  400a73:	55                   	push   %rbp
+  400a74:	48 89 e5             	mov    %rsp,%rbp
+  400a77:	53                   	push   %rbx
+  400a78:	48 83 ec 28          	sub    $0x28,%rsp
+  400a7c:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+  400a80:	89 75 d4             	mov    %esi,-0x2c(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:75
+	int s;
+	for(s=0; s<n; s++) {
+  400a83:	c7 45 ec 00 00 00 00 	movl   $0x0,-0x14(%rbp)
+  400a8a:	e9 69 02 00 00       	jmpq   400cf8 <getGrades+0x285>
+/home/lribeir1/CS220/proj4/gradesTemp.c:76 (discriminator 3)
+		grds[0][s]=40+rand()%51;
+  400a8f:	e8 bc fc ff ff       	callq  400750 <rand@plt>
+  400a94:	89 c1                	mov    %eax,%ecx
+  400a96:	ba a1 a0 a0 a0       	mov    $0xa0a0a0a1,%edx
+  400a9b:	89 c8                	mov    %ecx,%eax
+  400a9d:	f7 ea                	imul   %edx
+  400a9f:	8d 04 0a             	lea    (%rdx,%rcx,1),%eax
+  400aa2:	c1 f8 05             	sar    $0x5,%eax
+  400aa5:	89 c2                	mov    %eax,%edx
+  400aa7:	89 c8                	mov    %ecx,%eax
+  400aa9:	c1 f8 1f             	sar    $0x1f,%eax
+  400aac:	29 c2                	sub    %eax,%edx
+  400aae:	89 d0                	mov    %edx,%eax
+  400ab0:	6b c0 33             	imul   $0x33,%eax,%eax
+  400ab3:	29 c1                	sub    %eax,%ecx
+  400ab5:	89 c8                	mov    %ecx,%eax
+  400ab7:	8d 48 28             	lea    0x28(%rax),%ecx
+  400aba:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400abe:	8b 55 ec             	mov    -0x14(%rbp),%edx
+  400ac1:	48 63 d2             	movslq %edx,%rdx
+  400ac4:	89 0c 90             	mov    %ecx,(%rax,%rdx,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:77 (discriminator 3)
+		grds[1][s]=30+rand()%51;
+  400ac7:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400acb:	48 8d 98 90 01 00 00 	lea    0x190(%rax),%rbx
+  400ad2:	e8 79 fc ff ff       	callq  400750 <rand@plt>
+  400ad7:	89 c1                	mov    %eax,%ecx
+  400ad9:	ba a1 a0 a0 a0       	mov    $0xa0a0a0a1,%edx
+  400ade:	89 c8                	mov    %ecx,%eax
+  400ae0:	f7 ea                	imul   %edx
+  400ae2:	8d 04 0a             	lea    (%rdx,%rcx,1),%eax
+  400ae5:	c1 f8 05             	sar    $0x5,%eax
+  400ae8:	89 c2                	mov    %eax,%edx
+  400aea:	89 c8                	mov    %ecx,%eax
+  400aec:	c1 f8 1f             	sar    $0x1f,%eax
+  400aef:	29 c2                	sub    %eax,%edx
+  400af1:	89 d0                	mov    %edx,%eax
+  400af3:	6b c0 33             	imul   $0x33,%eax,%eax
+  400af6:	29 c1                	sub    %eax,%ecx
+  400af8:	89 c8                	mov    %ecx,%eax
+  400afa:	8d 50 1e             	lea    0x1e(%rax),%edx
+  400afd:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  400b00:	48 98                	cltq   
+  400b02:	89 14 83             	mov    %edx,(%rbx,%rax,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:78 (discriminator 3)
+		grds[2][s]=60+rand()%31;
+  400b05:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400b09:	48 8d 98 20 03 00 00 	lea    0x320(%rax),%rbx
+  400b10:	e8 3b fc ff ff       	callq  400750 <rand@plt>
+  400b15:	89 c1                	mov    %eax,%ecx
+  400b17:	ba 43 08 21 84       	mov    $0x84210843,%edx
+  400b1c:	89 c8                	mov    %ecx,%eax
+  400b1e:	f7 ea                	imul   %edx
+  400b20:	8d 04 0a             	lea    (%rdx,%rcx,1),%eax
+  400b23:	c1 f8 04             	sar    $0x4,%eax
+  400b26:	89 c2                	mov    %eax,%edx
+  400b28:	89 c8                	mov    %ecx,%eax
+  400b2a:	c1 f8 1f             	sar    $0x1f,%eax
+  400b2d:	29 c2                	sub    %eax,%edx
+  400b2f:	89 d0                	mov    %edx,%eax
+  400b31:	89 c2                	mov    %eax,%edx
+  400b33:	c1 e2 05             	shl    $0x5,%edx
+  400b36:	29 c2                	sub    %eax,%edx
+  400b38:	89 c8                	mov    %ecx,%eax
+  400b3a:	29 d0                	sub    %edx,%eax
+  400b3c:	8d 50 3c             	lea    0x3c(%rax),%edx
+  400b3f:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  400b42:	48 98                	cltq   
+  400b44:	89 14 83             	mov    %edx,(%rbx,%rax,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:79 (discriminator 3)
+		grds[3][s]=rand()%101;
+  400b47:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400b4b:	48 8d 98 b0 04 00 00 	lea    0x4b0(%rax),%rbx
+  400b52:	e8 f9 fb ff ff       	callq  400750 <rand@plt>
+  400b57:	89 c1                	mov    %eax,%ecx
+  400b59:	ba cb f0 8d 28       	mov    $0x288df0cb,%edx
+  400b5e:	89 c8                	mov    %ecx,%eax
+  400b60:	f7 ea                	imul   %edx
+  400b62:	c1 fa 04             	sar    $0x4,%edx
+  400b65:	89 c8                	mov    %ecx,%eax
+  400b67:	c1 f8 1f             	sar    $0x1f,%eax
+  400b6a:	29 c2                	sub    %eax,%edx
+  400b6c:	89 d0                	mov    %edx,%eax
+  400b6e:	6b c0 65             	imul   $0x65,%eax,%eax
+  400b71:	29 c1                	sub    %eax,%ecx
+  400b73:	89 c8                	mov    %ecx,%eax
+  400b75:	8b 55 ec             	mov    -0x14(%rbp),%edx
+  400b78:	48 63 d2             	movslq %edx,%rdx
+  400b7b:	89 04 93             	mov    %eax,(%rbx,%rdx,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:80 (discriminator 3)
+		grds[4][s]=rand()%10;
+  400b7e:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400b82:	48 8d 98 40 06 00 00 	lea    0x640(%rax),%rbx
+  400b89:	e8 c2 fb ff ff       	callq  400750 <rand@plt>
+  400b8e:	89 c1                	mov    %eax,%ecx
+  400b90:	ba 67 66 66 66       	mov    $0x66666667,%edx
+  400b95:	89 c8                	mov    %ecx,%eax
+  400b97:	f7 ea                	imul   %edx
+  400b99:	c1 fa 02             	sar    $0x2,%edx
+  400b9c:	89 c8                	mov    %ecx,%eax
+  400b9e:	c1 f8 1f             	sar    $0x1f,%eax
+  400ba1:	29 c2                	sub    %eax,%edx
+  400ba3:	89 d0                	mov    %edx,%eax
+  400ba5:	c1 e0 02             	shl    $0x2,%eax
+  400ba8:	01 d0                	add    %edx,%eax
+  400baa:	01 c0                	add    %eax,%eax
+  400bac:	29 c1                	sub    %eax,%ecx
+  400bae:	89 ca                	mov    %ecx,%edx
+  400bb0:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  400bb3:	48 98                	cltq   
+  400bb5:	89 14 83             	mov    %edx,(%rbx,%rax,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:81 (discriminator 3)
+		grds[5][s]=rand()%10;
+  400bb8:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400bbc:	48 8d 98 d0 07 00 00 	lea    0x7d0(%rax),%rbx
+  400bc3:	e8 88 fb ff ff       	callq  400750 <rand@plt>
+  400bc8:	89 c1                	mov    %eax,%ecx
+  400bca:	ba 67 66 66 66       	mov    $0x66666667,%edx
+  400bcf:	89 c8                	mov    %ecx,%eax
+  400bd1:	f7 ea                	imul   %edx
+  400bd3:	c1 fa 02             	sar    $0x2,%edx
+  400bd6:	89 c8                	mov    %ecx,%eax
+  400bd8:	c1 f8 1f             	sar    $0x1f,%eax
+  400bdb:	29 c2                	sub    %eax,%edx
+  400bdd:	89 d0                	mov    %edx,%eax
+  400bdf:	c1 e0 02             	shl    $0x2,%eax
+  400be2:	01 d0                	add    %edx,%eax
+  400be4:	01 c0                	add    %eax,%eax
+  400be6:	29 c1                	sub    %eax,%ecx
+  400be8:	89 ca                	mov    %ecx,%edx
+  400bea:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  400bed:	48 98                	cltq   
+  400bef:	89 14 83             	mov    %edx,(%rbx,%rax,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:82 (discriminator 3)
+		grds[6][s]=rand()%10;
+  400bf2:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400bf6:	48 8d 98 60 09 00 00 	lea    0x960(%rax),%rbx
+  400bfd:	e8 4e fb ff ff       	callq  400750 <rand@plt>
+  400c02:	89 c1                	mov    %eax,%ecx
+  400c04:	ba 67 66 66 66       	mov    $0x66666667,%edx
+  400c09:	89 c8                	mov    %ecx,%eax
+  400c0b:	f7 ea                	imul   %edx
+  400c0d:	c1 fa 02             	sar    $0x2,%edx
+  400c10:	89 c8                	mov    %ecx,%eax
+  400c12:	c1 f8 1f             	sar    $0x1f,%eax
+  400c15:	29 c2                	sub    %eax,%edx
+  400c17:	89 d0                	mov    %edx,%eax
+  400c19:	c1 e0 02             	shl    $0x2,%eax
+  400c1c:	01 d0                	add    %edx,%eax
+  400c1e:	01 c0                	add    %eax,%eax
+  400c20:	29 c1                	sub    %eax,%ecx
+  400c22:	89 ca                	mov    %ecx,%edx
+  400c24:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  400c27:	48 98                	cltq   
+  400c29:	89 14 83             	mov    %edx,(%rbx,%rax,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:83 (discriminator 3)
+		grds[7][s]=rand()%10;
+  400c2c:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400c30:	48 8d 98 f0 0a 00 00 	lea    0xaf0(%rax),%rbx
+  400c37:	e8 14 fb ff ff       	callq  400750 <rand@plt>
+  400c3c:	89 c1                	mov    %eax,%ecx
+  400c3e:	ba 67 66 66 66       	mov    $0x66666667,%edx
+  400c43:	89 c8                	mov    %ecx,%eax
+  400c45:	f7 ea                	imul   %edx
+  400c47:	c1 fa 02             	sar    $0x2,%edx
+  400c4a:	89 c8                	mov    %ecx,%eax
+  400c4c:	c1 f8 1f             	sar    $0x1f,%eax
+  400c4f:	29 c2                	sub    %eax,%edx
+  400c51:	89 d0                	mov    %edx,%eax
+  400c53:	c1 e0 02             	shl    $0x2,%eax
+  400c56:	01 d0                	add    %edx,%eax
+  400c58:	01 c0                	add    %eax,%eax
+  400c5a:	29 c1                	sub    %eax,%ecx
+  400c5c:	89 ca                	mov    %ecx,%edx
+  400c5e:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  400c61:	48 98                	cltq   
+  400c63:	89 14 83             	mov    %edx,(%rbx,%rax,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:84 (discriminator 3)
+		grds[8][s]=30+rand()%66;
+  400c66:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400c6a:	48 8d 98 80 0c 00 00 	lea    0xc80(%rax),%rbx
+  400c71:	e8 da fa ff ff       	callq  400750 <rand@plt>
+  400c76:	89 c1                	mov    %eax,%ecx
+  400c78:	ba e1 83 0f 3e       	mov    $0x3e0f83e1,%edx
+  400c7d:	89 c8                	mov    %ecx,%eax
+  400c7f:	f7 ea                	imul   %edx
+  400c81:	c1 fa 04             	sar    $0x4,%edx
+  400c84:	89 c8                	mov    %ecx,%eax
+  400c86:	c1 f8 1f             	sar    $0x1f,%eax
+  400c89:	29 c2                	sub    %eax,%edx
+  400c8b:	89 d0                	mov    %edx,%eax
+  400c8d:	01 c0                	add    %eax,%eax
+  400c8f:	89 c2                	mov    %eax,%edx
+  400c91:	c1 e2 05             	shl    $0x5,%edx
+  400c94:	01 d0                	add    %edx,%eax
+  400c96:	29 c1                	sub    %eax,%ecx
+  400c98:	89 c8                	mov    %ecx,%eax
+  400c9a:	8d 50 1e             	lea    0x1e(%rax),%edx
+  400c9d:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  400ca0:	48 98                	cltq   
+  400ca2:	89 14 83             	mov    %edx,(%rbx,%rax,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:85 (discriminator 3)
+		grds[9][s]=40+rand()%56;
+  400ca5:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400ca9:	48 8d 98 10 0e 00 00 	lea    0xe10(%rax),%rbx
+  400cb0:	e8 9b fa ff ff       	callq  400750 <rand@plt>
+  400cb5:	89 c1                	mov    %eax,%ecx
+  400cb7:	ba 93 24 49 92       	mov    $0x92492493,%edx
+  400cbc:	89 c8                	mov    %ecx,%eax
+  400cbe:	f7 ea                	imul   %edx
+  400cc0:	8d 04 0a             	lea    (%rdx,%rcx,1),%eax
+  400cc3:	c1 f8 05             	sar    $0x5,%eax
+  400cc6:	89 c2                	mov    %eax,%edx
+  400cc8:	89 c8                	mov    %ecx,%eax
+  400cca:	c1 f8 1f             	sar    $0x1f,%eax
+  400ccd:	29 c2                	sub    %eax,%edx
+  400ccf:	89 d0                	mov    %edx,%eax
+  400cd1:	89 c2                	mov    %eax,%edx
+  400cd3:	8d 04 d5 00 00 00 00 	lea    0x0(,%rdx,8),%eax
+  400cda:	89 c2                	mov    %eax,%edx
+  400cdc:	8d 04 d5 00 00 00 00 	lea    0x0(,%rdx,8),%eax
+  400ce3:	29 d0                	sub    %edx,%eax
+  400ce5:	29 c1                	sub    %eax,%ecx
+  400ce7:	89 c8                	mov    %ecx,%eax
+  400ce9:	8d 50 28             	lea    0x28(%rax),%edx
+  400cec:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  400cef:	48 98                	cltq   
+  400cf1:	89 14 83             	mov    %edx,(%rbx,%rax,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:75 (discriminator 3)
+	}
+}
+
+void getGrades(int grds[11][100],int n) {
+	int s;
+	for(s=0; s<n; s++) {
+  400cf4:	83 45 ec 01          	addl   $0x1,-0x14(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:75 (discriminator 1)
+  400cf8:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  400cfb:	3b 45 d4             	cmp    -0x2c(%rbp),%eax
+  400cfe:	0f 8c 8b fd ff ff    	jl     400a8f <getGrades+0x1c>
+/home/lribeir1/CS220/proj4/gradesTemp.c:87
+		grds[6][s]=rand()%10;
+		grds[7][s]=rand()%10;
+		grds[8][s]=30+rand()%66;
+		grds[9][s]=40+rand()%56;
+	}
+}
+  400d04:	48 83 c4 28          	add    $0x28,%rsp
+  400d08:	5b                   	pop    %rbx
+  400d09:	5d                   	pop    %rbp
+  400d0a:	c3                   	retq   
+
+0000000000400d0b <getAvg>:
+getAvg():
+/home/lribeir1/CS220/proj4/gradesTemp.c:89
+
+void getAvg(int grds[11][100],int n) {
+  400d0b:	55                   	push   %rbp
+  400d0c:	48 89 e5             	mov    %rsp,%rbp
+  400d0f:	48 89 7d d8          	mov    %rdi,-0x28(%rbp)
+  400d13:	89 75 d4             	mov    %esi,-0x2c(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:95
+	int s;
+	int avgProj;
+	int minProj;
+	int avgQuiz;
+	int avgTest;
+	for(s=0; s<n; s++) {
+  400d16:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%rbp)
+  400d1d:	e9 f6 01 00 00       	jmpq   400f18 <getAvg+0x20d>
+/home/lribeir1/CS220/proj4/gradesTemp.c:96
+		minProj=101;
+  400d22:	c7 45 f8 65 00 00 00 	movl   $0x65,-0x8(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:97
+		if (grds[0][s] < minProj) minProj=grds[0][s];
+  400d29:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400d2d:	8b 55 fc             	mov    -0x4(%rbp),%edx
+  400d30:	48 63 d2             	movslq %edx,%rdx
+  400d33:	8b 04 90             	mov    (%rax,%rdx,4),%eax
+  400d36:	3b 45 f8             	cmp    -0x8(%rbp),%eax
+  400d39:	7d 10                	jge    400d4b <getAvg+0x40>
+/home/lribeir1/CS220/proj4/gradesTemp.c:97 (discriminator 1)
+  400d3b:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400d3f:	8b 55 fc             	mov    -0x4(%rbp),%edx
+  400d42:	48 63 d2             	movslq %edx,%rdx
+  400d45:	8b 04 90             	mov    (%rax,%rdx,4),%eax
+  400d48:	89 45 f8             	mov    %eax,-0x8(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:98
+		if (grds[1][s] < minProj) minProj=grds[1][s];
+  400d4b:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400d4f:	48 8d 90 90 01 00 00 	lea    0x190(%rax),%rdx
+  400d56:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400d59:	48 98                	cltq   
+  400d5b:	8b 04 82             	mov    (%rdx,%rax,4),%eax
+  400d5e:	3b 45 f8             	cmp    -0x8(%rbp),%eax
+  400d61:	7d 16                	jge    400d79 <getAvg+0x6e>
+/home/lribeir1/CS220/proj4/gradesTemp.c:98 (discriminator 1)
+  400d63:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400d67:	48 8d 90 90 01 00 00 	lea    0x190(%rax),%rdx
+  400d6e:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400d71:	48 98                	cltq   
+  400d73:	8b 04 82             	mov    (%rdx,%rax,4),%eax
+  400d76:	89 45 f8             	mov    %eax,-0x8(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:99
+		if (grds[2][s] < minProj) minProj=grds[2][s];
+  400d79:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400d7d:	48 8d 90 20 03 00 00 	lea    0x320(%rax),%rdx
+  400d84:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400d87:	48 98                	cltq   
+  400d89:	8b 04 82             	mov    (%rdx,%rax,4),%eax
+  400d8c:	3b 45 f8             	cmp    -0x8(%rbp),%eax
+  400d8f:	7d 16                	jge    400da7 <getAvg+0x9c>
+/home/lribeir1/CS220/proj4/gradesTemp.c:99 (discriminator 1)
+  400d91:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400d95:	48 8d 90 20 03 00 00 	lea    0x320(%rax),%rdx
+  400d9c:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400d9f:	48 98                	cltq   
+  400da1:	8b 04 82             	mov    (%rdx,%rax,4),%eax
+  400da4:	89 45 f8             	mov    %eax,-0x8(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:100
+		if (grds[3][s] < minProj) minProj=grds[3][s];
+  400da7:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400dab:	48 8d 90 b0 04 00 00 	lea    0x4b0(%rax),%rdx
+  400db2:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400db5:	48 98                	cltq   
+  400db7:	8b 04 82             	mov    (%rdx,%rax,4),%eax
+  400dba:	3b 45 f8             	cmp    -0x8(%rbp),%eax
+  400dbd:	7d 16                	jge    400dd5 <getAvg+0xca>
+/home/lribeir1/CS220/proj4/gradesTemp.c:100 (discriminator 1)
+  400dbf:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400dc3:	48 8d 90 b0 04 00 00 	lea    0x4b0(%rax),%rdx
+  400dca:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400dcd:	48 98                	cltq   
+  400dcf:	8b 04 82             	mov    (%rdx,%rax,4),%eax
+  400dd2:	89 45 f8             	mov    %eax,-0x8(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:101 (discriminator 2)
+		avgProj=(grds[0][s] + grds[1][s] + grds[2][s] + grds[3][s] - minProj) / 3;
+  400dd5:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400dd9:	8b 55 fc             	mov    -0x4(%rbp),%edx
+  400ddc:	48 63 d2             	movslq %edx,%rdx
+  400ddf:	8b 14 90             	mov    (%rax,%rdx,4),%edx
+  400de2:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400de6:	48 8d 88 90 01 00 00 	lea    0x190(%rax),%rcx
+  400ded:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400df0:	48 98                	cltq   
+  400df2:	8b 04 81             	mov    (%rcx,%rax,4),%eax
+  400df5:	8d 0c 02             	lea    (%rdx,%rax,1),%ecx
+  400df8:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400dfc:	48 8d 90 20 03 00 00 	lea    0x320(%rax),%rdx
+  400e03:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400e06:	48 98                	cltq   
+  400e08:	8b 04 82             	mov    (%rdx,%rax,4),%eax
+  400e0b:	01 c1                	add    %eax,%ecx
+  400e0d:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400e11:	48 8d 90 b0 04 00 00 	lea    0x4b0(%rax),%rdx
+  400e18:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400e1b:	48 98                	cltq   
+  400e1d:	8b 04 82             	mov    (%rdx,%rax,4),%eax
+  400e20:	01 c8                	add    %ecx,%eax
+  400e22:	2b 45 f8             	sub    -0x8(%rbp),%eax
+  400e25:	89 c1                	mov    %eax,%ecx
+  400e27:	ba 56 55 55 55       	mov    $0x55555556,%edx
+  400e2c:	89 c8                	mov    %ecx,%eax
+  400e2e:	f7 ea                	imul   %edx
+  400e30:	89 c8                	mov    %ecx,%eax
+  400e32:	c1 f8 1f             	sar    $0x1f,%eax
+  400e35:	29 c2                	sub    %eax,%edx
+  400e37:	89 d0                	mov    %edx,%eax
+  400e39:	89 45 f4             	mov    %eax,-0xc(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:102 (discriminator 2)
+		avgQuiz=(10 *(grds[4][s] + grds[5][s] + grds[6][s] + grds[7][s])) / 4;
+  400e3c:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400e40:	48 8d 90 40 06 00 00 	lea    0x640(%rax),%rdx
+  400e47:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400e4a:	48 98                	cltq   
+  400e4c:	8b 14 82             	mov    (%rdx,%rax,4),%edx
+  400e4f:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400e53:	48 8d 88 d0 07 00 00 	lea    0x7d0(%rax),%rcx
+  400e5a:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400e5d:	48 98                	cltq   
+  400e5f:	8b 04 81             	mov    (%rcx,%rax,4),%eax
+  400e62:	8d 0c 02             	lea    (%rdx,%rax,1),%ecx
+  400e65:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400e69:	48 8d 90 60 09 00 00 	lea    0x960(%rax),%rdx
+  400e70:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400e73:	48 98                	cltq   
+  400e75:	8b 04 82             	mov    (%rdx,%rax,4),%eax
+  400e78:	01 c1                	add    %eax,%ecx
+  400e7a:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400e7e:	48 8d 90 f0 0a 00 00 	lea    0xaf0(%rax),%rdx
+  400e85:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400e88:	48 98                	cltq   
+  400e8a:	8b 04 82             	mov    (%rdx,%rax,4),%eax
+  400e8d:	8d 14 01             	lea    (%rcx,%rax,1),%edx
+  400e90:	89 d0                	mov    %edx,%eax
+  400e92:	c1 e0 02             	shl    $0x2,%eax
+  400e95:	01 d0                	add    %edx,%eax
+  400e97:	01 c0                	add    %eax,%eax
+  400e99:	8d 50 03             	lea    0x3(%rax),%edx
+  400e9c:	85 c0                	test   %eax,%eax
+  400e9e:	0f 48 c2             	cmovs  %edx,%eax
+  400ea1:	c1 f8 02             	sar    $0x2,%eax
+  400ea4:	89 45 f0             	mov    %eax,-0x10(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:103 (discriminator 2)
+		avgTest=(grds[8][s] + grds[9][s])/2;
+  400ea7:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400eab:	48 8d 90 80 0c 00 00 	lea    0xc80(%rax),%rdx
+  400eb2:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400eb5:	48 98                	cltq   
+  400eb7:	8b 14 82             	mov    (%rdx,%rax,4),%edx
+  400eba:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400ebe:	48 8d 88 10 0e 00 00 	lea    0xe10(%rax),%rcx
+  400ec5:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400ec8:	48 98                	cltq   
+  400eca:	8b 04 81             	mov    (%rcx,%rax,4),%eax
+  400ecd:	01 d0                	add    %edx,%eax
+  400ecf:	89 c2                	mov    %eax,%edx
+  400ed1:	c1 ea 1f             	shr    $0x1f,%edx
+  400ed4:	01 d0                	add    %edx,%eax
+  400ed6:	d1 f8                	sar    %eax
+  400ed8:	89 45 ec             	mov    %eax,-0x14(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:104 (discriminator 2)
+		grds[10][s] = (3*avgProj + avgQuiz + 2*avgTest) / 6;
+  400edb:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  400edf:	48 8d b0 a0 0f 00 00 	lea    0xfa0(%rax),%rsi
+  400ee6:	8b 55 f4             	mov    -0xc(%rbp),%edx
+  400ee9:	89 d0                	mov    %edx,%eax
+  400eeb:	01 c0                	add    %eax,%eax
+  400eed:	01 c2                	add    %eax,%edx
+  400eef:	8b 45 f0             	mov    -0x10(%rbp),%eax
+  400ef2:	01 c2                	add    %eax,%edx
+  400ef4:	8b 45 ec             	mov    -0x14(%rbp),%eax
+  400ef7:	01 c0                	add    %eax,%eax
+  400ef9:	8d 0c 02             	lea    (%rdx,%rax,1),%ecx
+  400efc:	ba ab aa aa 2a       	mov    $0x2aaaaaab,%edx
+  400f01:	89 c8                	mov    %ecx,%eax
+  400f03:	f7 ea                	imul   %edx
+  400f05:	89 c8                	mov    %ecx,%eax
+  400f07:	c1 f8 1f             	sar    $0x1f,%eax
+  400f0a:	29 c2                	sub    %eax,%edx
+  400f0c:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400f0f:	48 98                	cltq   
+  400f11:	89 14 86             	mov    %edx,(%rsi,%rax,4)
+/home/lribeir1/CS220/proj4/gradesTemp.c:95 (discriminator 2)
+	int s;
+	int avgProj;
+	int minProj;
+	int avgQuiz;
+	int avgTest;
+	for(s=0; s<n; s++) {
+  400f14:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:95 (discriminator 1)
+  400f18:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  400f1b:	3b 45 d4             	cmp    -0x2c(%rbp),%eax
+  400f1e:	0f 8c fe fd ff ff    	jl     400d22 <getAvg+0x17>
+/home/lribeir1/CS220/proj4/gradesTemp.c:106
+		avgProj=(grds[0][s] + grds[1][s] + grds[2][s] + grds[3][s] - minProj) / 3;
+		avgQuiz=(10 *(grds[4][s] + grds[5][s] + grds[6][s] + grds[7][s])) / 4;
+		avgTest=(grds[8][s] + grds[9][s])/2;
+		grds[10][s] = (3*avgProj + avgQuiz + 2*avgTest) / 6;
+	}
+}
+  400f24:	5d                   	pop    %rbp
+  400f25:	c3                   	retq   
+
+0000000000400f26 <getUserLine>:
+getUserLine():
+/home/lribeir1/CS220/proj4/gradesTemp.c:110
+
+
+
+char * getUserLine() {
+  400f26:	55                   	push   %rbp
+  400f27:	48 89 e5             	mov    %rsp,%rbp
+  400f2a:	48 81 ec 00 01 00 00 	sub    $0x100,%rsp
+/home/lribeir1/CS220/proj4/gradesTemp.c:113
+	char buffer[256];
+
+	if (gets(buffer)) {
+  400f31:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  400f38:	48 89 c7             	mov    %rax,%rdi
+  400f3b:	e8 c0 f7 ff ff       	callq  400700 <gets@plt>
+  400f40:	48 85 c0             	test   %rax,%rax
+  400f43:	74 63                	je     400fa8 <getUserLine+0x82>
+/home/lribeir1/CS220/proj4/gradesTemp.c:114
+		memcpy(retBuffer,buffer,sizeof(buffer));
+  400f45:	48 8b 05 64 2e 20 00 	mov    0x202e64(%rip),%rax        # 603db0 <retBuffer>
+  400f4c:	48 89 c2             	mov    %rax,%rdx
+  400f4f:	48 8d 85 00 ff ff ff 	lea    -0x100(%rbp),%rax
+  400f56:	b9 00 01 00 00       	mov    $0x100,%ecx
+  400f5b:	48 8b 30             	mov    (%rax),%rsi
+  400f5e:	48 89 32             	mov    %rsi,(%rdx)
+  400f61:	48 8d 72 08          	lea    0x8(%rdx),%rsi
+  400f65:	89 cf                	mov    %ecx,%edi
+  400f67:	48 01 f7             	add    %rsi,%rdi
+  400f6a:	48 8d 70 08          	lea    0x8(%rax),%rsi
+  400f6e:	41 89 c8             	mov    %ecx,%r8d
+  400f71:	4c 01 c6             	add    %r8,%rsi
+  400f74:	48 8b 76 f0          	mov    -0x10(%rsi),%rsi
+  400f78:	48 89 77 f0          	mov    %rsi,-0x10(%rdi)
+  400f7c:	48 8d 7a 08          	lea    0x8(%rdx),%rdi
+  400f80:	48 83 e7 f8          	and    $0xfffffffffffffff8,%rdi
+  400f84:	48 29 fa             	sub    %rdi,%rdx
+  400f87:	48 29 d0             	sub    %rdx,%rax
+  400f8a:	01 d1                	add    %edx,%ecx
+  400f8c:	83 e1 f8             	and    $0xfffffff8,%ecx
+  400f8f:	c1 e9 03             	shr    $0x3,%ecx
+  400f92:	89 ca                	mov    %ecx,%edx
+  400f94:	89 d2                	mov    %edx,%edx
+  400f96:	48 89 c6             	mov    %rax,%rsi
+  400f99:	48 89 d1             	mov    %rdx,%rcx
+  400f9c:	f3 48 a5             	rep movsq %ds:(%rsi),%es:(%rdi)
+/home/lribeir1/CS220/proj4/gradesTemp.c:115
+		return retBuffer;
+  400f9f:	48 8b 05 0a 2e 20 00 	mov    0x202e0a(%rip),%rax        # 603db0 <retBuffer>
+  400fa6:	eb 05                	jmp    400fad <getUserLine+0x87>
+/home/lribeir1/CS220/proj4/gradesTemp.c:117
+	}
+	return NULL;
+  400fa8:	b8 00 00 00 00       	mov    $0x0,%eax
+/home/lribeir1/CS220/proj4/gradesTemp.c:118 (discriminator 1)
+}
+  400fad:	c9                   	leaveq 
+  400fae:	c3                   	retq   
+
+0000000000400faf <printGrades>:
+printGrades():
+/home/lribeir1/CS220/proj4/gradesTemp.c:120
+
+void printGrades(int grds[11][100],int n,int first) {
+  400faf:	55                   	push   %rbp
+  400fb0:	48 89 e5             	mov    %rsp,%rbp
+  400fb3:	41 56                	push   %r14
+  400fb5:	41 55                	push   %r13
+  400fb7:	41 54                	push   %r12
+  400fb9:	53                   	push   %rbx
+  400fba:	48 83 ec 20          	sub    $0x20,%rsp
+  400fbe:	48 89 7d c8          	mov    %rdi,-0x38(%rbp)
+  400fc2:	89 75 c4             	mov    %esi,-0x3c(%rbp)
+  400fc5:	89 55 c0             	mov    %edx,-0x40(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:122
+	int s;
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+  400fc8:	48 83 ec 08          	sub    $0x8,%rsp
+  400fcc:	68 cb 12 40 00       	pushq  $0x4012cb
+  400fd1:	68 cf 12 40 00       	pushq  $0x4012cf
+  400fd6:	68 d2 12 40 00       	pushq  $0x4012d2
+  400fdb:	68 d5 12 40 00       	pushq  $0x4012d5
+  400fe0:	68 d8 12 40 00       	pushq  $0x4012d8
+  400fe5:	68 db 12 40 00       	pushq  $0x4012db
+  400fea:	68 de 12 40 00       	pushq  $0x4012de
+  400fef:	41 b9 6e 12 40 00    	mov    $0x40126e,%r9d
+  400ff5:	41 b8 71 12 40 00    	mov    $0x401271,%r8d
+  400ffb:	b9 74 12 40 00       	mov    $0x401274,%ecx
+  401000:	ba 77 12 40 00       	mov    $0x401277,%edx
+  401005:	be 7a 12 40 00       	mov    $0x40127a,%esi
+  40100a:	bf 80 12 40 00       	mov    $0x401280,%edi
+  40100f:	b8 00 00 00 00       	mov    $0x0,%eax
+  401014:	e8 97 f6 ff ff       	callq  4006b0 <printf@plt>
+  401019:	48 83 c4 40          	add    $0x40,%rsp
+/home/lribeir1/CS220/proj4/gradesTemp.c:124
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+  40101d:	bf e8 12 40 00       	mov    $0x4012e8,%edi
+  401022:	e8 69 f6 ff ff       	callq  400690 <puts@plt>
+/home/lribeir1/CS220/proj4/gradesTemp.c:125
+	for(s=0; s<n; s++) {
+  401027:	c7 45 dc 00 00 00 00 	movl   $0x0,-0x24(%rbp)
+  40102e:	e9 33 01 00 00       	jmpq   401166 <printGrades+0x1b7>
+/home/lribeir1/CS220/proj4/gradesTemp.c:126
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+  401033:	8b 55 c0             	mov    -0x40(%rbp),%edx
+  401036:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  401039:	01 d0                	add    %edx,%eax
+  40103b:	3d ec 00 00 00       	cmp    $0xec,%eax
+  401040:	75 17                	jne    401059 <printGrades+0xaa>
+/home/lribeir1/CS220/proj4/gradesTemp.c:126 (discriminator 1)
+  401042:	8b 55 dc             	mov    -0x24(%rbp),%edx
+  401045:	8b 45 c0             	mov    -0x40(%rbp),%eax
+  401048:	89 c6                	mov    %eax,%esi
+  40104a:	bf 32 13 40 00       	mov    $0x401332,%edi
+  40104f:	b8 00 00 00 00       	mov    $0x0,%eax
+  401054:	e8 57 f6 ff ff       	callq  4006b0 <printf@plt>
+/home/lribeir1/CS220/proj4/gradesTemp.c:130 (discriminator 2)
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+			grds[4][s],grds[5][s],grds[6][s],grds[7][s],
+			grds[8][s],grds[9][s],grds[10][s]);
+  401059:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  40105d:	48 8d 90 a0 0f 00 00 	lea    0xfa0(%rax),%rdx
+/home/lribeir1/CS220/proj4/gradesTemp.c:127 (discriminator 2)
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+  401064:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  401067:	48 98                	cltq   
+  401069:	44 8b 1c 82          	mov    (%rdx,%rax,4),%r11d
+/home/lribeir1/CS220/proj4/gradesTemp.c:130 (discriminator 2)
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+			grds[4][s],grds[5][s],grds[6][s],grds[7][s],
+			grds[8][s],grds[9][s],grds[10][s]);
+  40106d:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  401071:	48 8d 90 10 0e 00 00 	lea    0xe10(%rax),%rdx
+/home/lribeir1/CS220/proj4/gradesTemp.c:127 (discriminator 2)
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+  401078:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  40107b:	48 98                	cltq   
+  40107d:	44 8b 14 82          	mov    (%rdx,%rax,4),%r10d
+/home/lribeir1/CS220/proj4/gradesTemp.c:130 (discriminator 2)
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+			grds[4][s],grds[5][s],grds[6][s],grds[7][s],
+			grds[8][s],grds[9][s],grds[10][s]);
+  401081:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  401085:	48 8d 90 80 0c 00 00 	lea    0xc80(%rax),%rdx
+/home/lribeir1/CS220/proj4/gradesTemp.c:127 (discriminator 2)
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+  40108c:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  40108f:	48 98                	cltq   
+  401091:	44 8b 0c 82          	mov    (%rdx,%rax,4),%r9d
+/home/lribeir1/CS220/proj4/gradesTemp.c:129 (discriminator 2)
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+			grds[4][s],grds[5][s],grds[6][s],grds[7][s],
+  401095:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  401099:	48 8d 90 f0 0a 00 00 	lea    0xaf0(%rax),%rdx
+/home/lribeir1/CS220/proj4/gradesTemp.c:127 (discriminator 2)
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+  4010a0:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  4010a3:	48 98                	cltq   
+  4010a5:	44 8b 04 82          	mov    (%rdx,%rax,4),%r8d
+/home/lribeir1/CS220/proj4/gradesTemp.c:129 (discriminator 2)
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+			grds[4][s],grds[5][s],grds[6][s],grds[7][s],
+  4010a9:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  4010ad:	48 8d 90 60 09 00 00 	lea    0x960(%rax),%rdx
+/home/lribeir1/CS220/proj4/gradesTemp.c:127 (discriminator 2)
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+  4010b4:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  4010b7:	48 98                	cltq   
+  4010b9:	8b 3c 82             	mov    (%rdx,%rax,4),%edi
+/home/lribeir1/CS220/proj4/gradesTemp.c:129 (discriminator 2)
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+			grds[4][s],grds[5][s],grds[6][s],grds[7][s],
+  4010bc:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  4010c0:	48 8d 90 d0 07 00 00 	lea    0x7d0(%rax),%rdx
+/home/lribeir1/CS220/proj4/gradesTemp.c:127 (discriminator 2)
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+  4010c7:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  4010ca:	48 98                	cltq   
+  4010cc:	8b 34 82             	mov    (%rdx,%rax,4),%esi
+/home/lribeir1/CS220/proj4/gradesTemp.c:129 (discriminator 2)
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+			grds[4][s],grds[5][s],grds[6][s],grds[7][s],
+  4010cf:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  4010d3:	48 8d 90 40 06 00 00 	lea    0x640(%rax),%rdx
+/home/lribeir1/CS220/proj4/gradesTemp.c:127 (discriminator 2)
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+  4010da:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  4010dd:	48 98                	cltq   
+  4010df:	8b 0c 82             	mov    (%rdx,%rax,4),%ecx
+/home/lribeir1/CS220/proj4/gradesTemp.c:128 (discriminator 2)
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+  4010e2:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  4010e6:	48 8d 90 b0 04 00 00 	lea    0x4b0(%rax),%rdx
+/home/lribeir1/CS220/proj4/gradesTemp.c:127 (discriminator 2)
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+  4010ed:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  4010f0:	48 98                	cltq   
+  4010f2:	44 8b 2c 82          	mov    (%rdx,%rax,4),%r13d
+/home/lribeir1/CS220/proj4/gradesTemp.c:128 (discriminator 2)
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+  4010f6:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  4010fa:	48 8d 90 20 03 00 00 	lea    0x320(%rax),%rdx
+/home/lribeir1/CS220/proj4/gradesTemp.c:127 (discriminator 2)
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+  401101:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  401104:	48 98                	cltq   
+  401106:	44 8b 24 82          	mov    (%rdx,%rax,4),%r12d
+/home/lribeir1/CS220/proj4/gradesTemp.c:128 (discriminator 2)
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+  40110a:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  40110e:	48 8d 90 90 01 00 00 	lea    0x190(%rax),%rdx
+/home/lribeir1/CS220/proj4/gradesTemp.c:127 (discriminator 2)
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+		if(first+s == 236) printf("Me! %d %d\n",first,s);
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+  401115:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  401118:	48 98                	cltq   
+  40111a:	8b 14 82             	mov    (%rdx,%rax,4),%edx
+  40111d:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+  401121:	8b 5d dc             	mov    -0x24(%rbp),%ebx
+  401124:	48 63 db             	movslq %ebx,%rbx
+  401127:	8b 04 98             	mov    (%rax,%rbx,4),%eax
+  40112a:	44 8b 75 c0          	mov    -0x40(%rbp),%r14d
+  40112e:	8b 5d dc             	mov    -0x24(%rbp),%ebx
+  401131:	44 01 f3             	add    %r14d,%ebx
+  401134:	48 83 ec 08          	sub    $0x8,%rsp
+  401138:	41 53                	push   %r11
+  40113a:	41 52                	push   %r10
+  40113c:	41 51                	push   %r9
+  40113e:	41 50                	push   %r8
+  401140:	57                   	push   %rdi
+  401141:	56                   	push   %rsi
+  401142:	51                   	push   %rcx
+  401143:	45 89 e9             	mov    %r13d,%r9d
+  401146:	45 89 e0             	mov    %r12d,%r8d
+  401149:	89 d1                	mov    %edx,%ecx
+  40114b:	89 c2                	mov    %eax,%edx
+  40114d:	89 de                	mov    %ebx,%esi
+  40114f:	bf 40 13 40 00       	mov    $0x401340,%edi
+  401154:	b8 00 00 00 00       	mov    $0x0,%eax
+  401159:	e8 52 f5 ff ff       	callq  4006b0 <printf@plt>
+  40115e:	48 83 c4 40          	add    $0x40,%rsp
+/home/lribeir1/CS220/proj4/gradesTemp.c:125 (discriminator 2)
+void printGrades(int grds[11][100],int n,int first) {
+	int s;
+	printf(" %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s || %3s |\n",
+		"SID","P1", "P2", "P3","P4","H1","H2","H3","H4","T1","T2","Avg");
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+	for(s=0; s<n; s++) {
+  401162:	83 45 dc 01          	addl   $0x1,-0x24(%rbp)
+/home/lribeir1/CS220/proj4/gradesTemp.c:125 (discriminator 1)
+  401166:	8b 45 dc             	mov    -0x24(%rbp),%eax
+  401169:	3b 45 c4             	cmp    -0x3c(%rbp),%eax
+  40116c:	0f 8c c1 fe ff ff    	jl     401033 <printGrades+0x84>
+/home/lribeir1/CS220/proj4/gradesTemp.c:132
+		printf(" %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d | %3d || %3d |\n",
+			first+s,grds[0][s], grds[1][s], grds[2][s], grds[3][s],
+			grds[4][s],grds[5][s],grds[6][s],grds[7][s],
+			grds[8][s],grds[9][s],grds[10][s]);
+	}
+	printf("-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----||-----|\n");
+  401172:	bf e8 12 40 00       	mov    $0x4012e8,%edi
+  401177:	e8 14 f5 ff ff       	callq  400690 <puts@plt>
+/home/lribeir1/CS220/proj4/gradesTemp.c:133
+}
+  40117c:	48 8d 65 e0          	lea    -0x20(%rbp),%rsp
+  401180:	5b                   	pop    %rbx
+  401181:	41 5c                	pop    %r12
+  401183:	41 5d                	pop    %r13
+  401185:	41 5e                	pop    %r14
+  401187:	5d                   	pop    %rbp
+  401188:	c3                   	retq   
+  401189:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000401190 <__libc_csu_init>:
+__libc_csu_init():
+  401190:	41 57                	push   %r15
+  401192:	41 89 ff             	mov    %edi,%r15d
+  401195:	41 56                	push   %r14
+  401197:	49 89 f6             	mov    %rsi,%r14
+  40119a:	41 55                	push   %r13
+  40119c:	49 89 d5             	mov    %rdx,%r13
+  40119f:	41 54                	push   %r12
+  4011a1:	4c 8d 25 e8 03 20 00 	lea    0x2003e8(%rip),%r12        # 601590 <__frame_dummy_init_array_entry>
+  4011a8:	55                   	push   %rbp
+  4011a9:	48 8d 2d e8 03 20 00 	lea    0x2003e8(%rip),%rbp        # 601598 <__init_array_end>
+  4011b0:	53                   	push   %rbx
+  4011b1:	4c 29 e5             	sub    %r12,%rbp
+  4011b4:	31 db                	xor    %ebx,%ebx
+  4011b6:	48 c1 fd 03          	sar    $0x3,%rbp
+  4011ba:	48 83 ec 08          	sub    $0x8,%rsp
+  4011be:	e8 8d f4 ff ff       	callq  400650 <_init>
+  4011c3:	48 85 ed             	test   %rbp,%rbp
+  4011c6:	74 1e                	je     4011e6 <__libc_csu_init+0x56>
+  4011c8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  4011cf:	00 
+  4011d0:	4c 89 ea             	mov    %r13,%rdx
+  4011d3:	4c 89 f6             	mov    %r14,%rsi
+  4011d6:	44 89 ff             	mov    %r15d,%edi
+  4011d9:	41 ff 14 dc          	callq  *(%r12,%rbx,8)
+  4011dd:	48 83 c3 01          	add    $0x1,%rbx
+  4011e1:	48 39 eb             	cmp    %rbp,%rbx
+  4011e4:	75 ea                	jne    4011d0 <__libc_csu_init+0x40>
+  4011e6:	48 83 c4 08          	add    $0x8,%rsp
+  4011ea:	5b                   	pop    %rbx
+  4011eb:	5d                   	pop    %rbp
+  4011ec:	41 5c                	pop    %r12
+  4011ee:	41 5d                	pop    %r13
+  4011f0:	41 5e                	pop    %r14
+  4011f2:	41 5f                	pop    %r15
+  4011f4:	c3                   	retq   
+  4011f5:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+  4011fc:	00 00 00 00 
+
+0000000000401200 <__libc_csu_fini>:
+__libc_csu_fini():
+  401200:	f3 c3                	repz retq 
+
+Disassembly of section .fini:
+
+0000000000401204 <_fini>:
+_fini():
+  401204:	48 83 ec 08          	sub    $0x8,%rsp
+  401208:	48 83 c4 08          	add    $0x8,%rsp
+  40120c:	c3                   	retq   

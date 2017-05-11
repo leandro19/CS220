@@ -1,0 +1,45 @@
+
+============= Starting tier 1 =============
+-------------------- Winners Bracket ----------------------
+Playing scissors against paper ...
+  scissors score is 50, paper score is 0 ...scissors Won!!!!
+Playing lribeir1 against random ...
+  lribeir1 score is 34, random score is 25 ...lribeir1 Won!!!!
+  Player rock got a bye into the next tier
+============= Finished tier 1 =============
+
+============= Starting tier 2 =============
+-------------------- Winners Bracket ----------------------
+Playing scissors against rock ...
+  scissors score is 0, rock score is 50 ...rock Won!!!
+  Player lribeir1 got a bye into the next tier
+--------------------- Losers Bracket ------------------------------
+Playing random against paper ...
+  random score is 24, paper score is 31 ...paper Won!!!
+Eliminating random after two losses
+============= Finished tier 2 =============
+
+============= Starting tier 3 =============
+-------------------- Winners Bracket ----------------------
+Playing rock against lribeir1 ...
+  rock score is 0, lribeir1 score is 50 ...lribeir1 Won!!!
+--------------------- Losers Bracket ------------------------------
+Playing paper against scissors ...
+  paper score is 0, scissors score is 50 ...scissors Won!!!
+Eliminating paper after two losses
+============= Finished tier 3 =============
+
+============= Starting tier 4 =============
+-------------------- Winners Bracket ----------------------
+  Player lribeir1 got a bye into the next tier
+--------------------- Losers Bracket ------------------------------
+Playing scissors against rock ...
+  scissors score is 0, rock score is 50 ...rock Won!!!
+Eliminating scissors after two losses
+============= Finished tier 4 =============
+
+========== Championship Match! ==============
+Playing lribeir1 against rock ...
+  lribeir1 score is 50, rock score is 0 ...lribeir1 Won!!!!
+
+Winner and unbeaten champion: lribeir1!!!

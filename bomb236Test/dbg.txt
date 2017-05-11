@@ -1,0 +1,14 @@
+# This is my gdb command file
+# info functions
+#b explode_bomb
+#b secret_phase
+b *0x40146b
+set disassemble-next-line on
+set $VAR = 1
+commands
+p "return value 4?"
+p *(int*)($rbp - 0x10)
+r psol.txt
+ni
+end
+
